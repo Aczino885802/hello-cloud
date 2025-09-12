@@ -4,6 +4,9 @@
   "description": "Aplicación básica con Express para pruebas en la nube",
   "main": "src/app.js",
   "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
