@@ -4,30 +4,14 @@
   "description": "Aplicación básica con Express para pruebas en la nube",
   "main": "src/app.js",
   "type": "module",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon src/app.js",
     "test": "echo \"No test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Aczino885802/hello-cloud.git"
+  "engines": {
+    "node": "18.x"
   },
-  "keywords": [
-    "node",
-    "express",
-    "cloud",
-    "api"
-  ],
-  "author": "Aczino",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Aczino885802/hello-cloud/issues"
-  },
-  "homepage": "https://github.com/Aczino885802/hello-cloud#readme",
   "dependencies": {
     "express": "^5.1.0"
   },
@@ -35,4 +19,5 @@
     "nodemon": "^3.1.0"
   }
 }
+
 

@@ -1,15 +1,23 @@
-// Importar Express (ES Modules)
 import express from "express";
-
-// Crear la aplicación
+ 
 const app = express();
-
-// Endpoint básico
-app.get("/", (req, res) => {
-  res.send("¡Hola nube!");
+const PORT = process.env.PORT || 3000;
+ 
+app.get("/", (_req, res) => {
+  res.json({
+    message: "Hello Cloud ☁",
+    docs: ["/health", "/version"]
+  });
 });
-
-// Iniciar servidor
-app.listen(3000, () => {
-  console.log("Servidor corriendo en http://localhost:3000");
+ 
+app.get("/health", (_req, res) => {
+  res.json({ status: "ok", uptime: process.uptime() });
+});
+ 
+app.get("/version", (_req, res) => {
+  res.json({ name: "hello-cloud", version: "1.0.0" });
+});
+ 
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
